@@ -1,0 +1,89 @@
+.chatContainer {
+    display: flex;
+    flex-direction: column;    
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.messagesContainer {    
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.messagesList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    max-width: 80%;
+}
+
+.userMessage {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    max-width: 80%;
+    background-color: #dbeafe;
+    margin-left: auto;
+}
+
+.assistantMessage {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    max-width: 80%;
+    background-color: #f3f4f6;
+    margin-right: auto;
+}
+
+.loadingMessage {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    max-width: 80%;
+    background-color: #f3f4f6;
+    margin-right: auto;
+}
+
+.inputContainer {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    min-height: 2.5rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.sendButton {
+    padding: 0.5rem 1rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    min-width: 5rem;
+}
+
+.sendButton:hover:not(:disabled) {
+    background-color: #2563eb;
+}
+
+.sendButton:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
