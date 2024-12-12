@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "../../../styles/HomePageNavbar.module.css";
 
 function HomePageSectionOne() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   function togglemenu() {
     setIsMenuOpen(!isMenuOpen);
@@ -25,7 +27,7 @@ function HomePageSectionOne() {
           <div className={styles.navbarButton} onClick={togglemenu}>
             Sell your Car
           </div>
-          <div className={styles.navbarButton} onClick={togglemenu}>
+          <div className={styles.navbarButton} onClick={() => navigate("/insurance")}>
             Finance & Insurance
           </div>
         </div>
